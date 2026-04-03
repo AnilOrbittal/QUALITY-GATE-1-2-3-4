@@ -48,7 +48,7 @@ export default async function handler(req, res) {
           SET [PreviouslyUsedBy] = 'Updated'
           WHERE [Sr_No] = (SELECT MAX([Sr_No]) FROM ${tableName});
         `;
-        console.log('Update Query:', updateQuery);
+        console.log('Update Query...:', updateQuery);
 
         try {
           await sql.query(updateQuery);
